@@ -1,5 +1,8 @@
 Revision history for CGI-Easy-URLconf
 
+1.0.1	Sun Nov 25 08:35:34 EET 2012
+	Update Module::Install.
+
 1.0.0	Thu Nov 25 11:31:42 EET 2010
 	Initial release.
 

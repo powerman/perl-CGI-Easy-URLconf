@@ -4,7 +4,7 @@ use warnings;
 use strict;
 use Carp;
 
-use version; our $VERSION = qv('1.0.0');    # REMINDER: update Changes
+use version; our $VERSION = qv('1.0.1');    # REMINDER: update Changes
 
 # REMINDER: update dependencies in Makefile.PL
 use Perl6::Export::Attrs;
@@ -130,7 +130,7 @@ sub view2path :Export {
             }
             # WARNING apache не разрешает %2F в пути (nginx разрешает)
             $_ = uri_escape_utf8($_), s/%2F/\//g for @{$values};    ## no critic
-            $tmpl =~ s/\?/shift @{$values}/xmsge;
+            $tmpl =~ s/[?]/shift @{$values}/xmsge;
             $path = $tmpl;
             last;
         }

@@ -1,12 +1,12 @@
 package CGI::Easy::URLconf;
-
+use 5.010001;
 use warnings;
 use strict;
+use utf8;
 use Carp;
 
-use version; our $VERSION = qv('1.0.1');    # REMINDER: update Changes
+our $VERSION = 'v1.0.1';
 
-# REMINDER: update dependencies in Makefile.PL
 use Perl6::Export::Attrs;
 use URI::Escape qw( uri_escape_utf8 );
 
@@ -128,7 +128,7 @@ sub view2path :Export {
             if (@{$values} != ($tmpl =~ tr/?//)) {
                 croak "incorrect values amount for template '$tmpl'";
             }
-            # WARNING apache не разрешает %2F в пути (nginx разрешает)
+            # WARNING apache doesn't allow %2F in path (nginx allow)
             $_ = uri_escape_utf8($_), s/%2F/\//g for @{$values};    ## no critic
             $tmpl =~ s/[?]/shift @{$values}/xmsge;
             $path = $tmpl;

@@ -7,7 +7,7 @@ CGI::Easy::URLconf - map url path to handler sub and vice versa
 
 # VERSION
 
-This document describes CGI::Easy::URLconf version v1.0.1
+This document describes CGI::Easy::URLconf version v2.0.0
 
 # SYNOPSIS
 

@@ -1,0 +1,7 @@
+/CGI-Easy-URLconf-*
+/.build
+/_build*
+/Build
+MYMETA.*
+!META.json
+/.prove

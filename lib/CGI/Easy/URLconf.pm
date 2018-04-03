@@ -5,7 +5,7 @@ use strict;
 use utf8;
 use Carp;
 
-our $VERSION = 'v2.0.0';
+our $VERSION = 'v2.0.1';
 
 use Export::Attrs;
 use URI::Escape qw( uri_escape_utf8 );
@@ -181,7 +181,7 @@ CGI::Easy::URLconf - map url path to handler sub and vice versa
 
 =head1 VERSION
 
-This document describes CGI::Easy::URLconf version v2.0.0
+This document describes CGI::Easy::URLconf version v2.0.1
 
 
 =head1 SYNOPSIS
